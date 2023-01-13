@@ -206,12 +206,12 @@ else
 UserInfousername = UserId
 end
 return {
-Lock     = '\n*◍ بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n◍خاصيه المسح *',
-unLock   = '\n*◍ بواسطه ← *'..UserInfousername..'\n'..TextMsg,
-lockKtm  = '\n*◍ بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n◍خاصيه الكتم *',
-lockKid  = '\n*◍ بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n◍خاصيه التقييد *',
-lockKick = '\n*◍ بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n◍خاصيه الطرد *',
-Reply    = '\n*◍ المستخدم ← *'..UserInfousername..'\n*'..TextMsg..'*'
+Lock     = '\n*〄 بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n〄خاصيه المسح *',
+unLock   = '\n*〄 بواسطه ← *'..UserInfousername..'\n'..TextMsg,
+lockKtm  = '\n*〄 بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n〄خاصيه الكتم *',
+lockKid  = '\n*〄 بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n〄خاصيه التقييد *',
+lockKick = '\n*〄 بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n〄خاصيه الطرد *',
+Reply    = '\n*〄 المستخدم ← *'..UserInfousername..'\n*'..TextMsg..'*'
 }
 end
 
@@ -297,7 +297,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور فينوم* \n","md",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"*〄 اهلاً بك عـزيـري الـمـطور فينوم* \n","md",true, false, false, true, reply_markup)
 return false 
 end
 if text == "🌐 | قسم الاذاعه" then 
@@ -453,7 +453,7 @@ end
 end
 end
 local list = Redis:smembers(NASA..'fake')
-send(msg.chat_id,msg.id,"◍ تم ايقاف "..#list.." بوت \n عدد مجموعاتهم اقل من 2","md",true)
+send(msg.chat_id,msg.id,"〄 تم ايقاف "..#list.." بوت \n عدد مجموعاتهم اقل من 2","md",true)
 end
 if text == "🚸 | قائمة الوهمي" or text == "الوهمي" then
 local txx = "اليك قائمة البوتات الوهمية! \n"
@@ -1130,7 +1130,7 @@ data = {
 {text = '👤 | مبرمج السورس', url = 't.me/WWWL5'}, 
 },
 {
-{text = '☢️ | اضغط هنا لتنصيب', url = 't.me/Maker1VENOM1bot'}, 
+{text = '🤖 | اضغط هنا لتنصيب', url = 't.me/Maker1VENOM1bot'}, 
 },
 {
 {text = '🌐 | قناة السورس', url = 't.me/MRv7x'}, 
