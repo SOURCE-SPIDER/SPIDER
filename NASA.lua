@@ -363,35 +363,35 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور فينوم* \n","md",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"*〄 اهلاً بك عـزيـري الـمـطور فينوم* \n","md",true, false, false, true, reply_markup)
 return false 
 end
 
 ------
 if text and text:match("^رفع مطور (%d+)$") then
 Redis:sadd(NASA.."Dev",text:match("^رفع مطور (%d+)$"))
-send(msg.chat_id,msg.id,'◍ تم رفع العضو مطور ف الصانع بنجاح ',"md",true)  
+send(msg.chat_id,msg.id,'〄 تم رفع العضو مطور ف الصانع بنجاح ',"md",true)  
 return false 
 end
 if text and text:match("^تنزيل مطور (%d+)$") then
 Redis:sadd(NASA.."Dev",text:match("^تنزيل مطور (%d+)$"))
-send(msg.chat_id,msg.id,'◍ تم تنزيل العضو مطور من الصانع بنجاح ',"md",true)  
+send(msg.chat_id,msg.id,'〄 تم تنزيل العضو مطور من الصانع بنجاح ',"md",true)  
 return false 
 end
 -----
 
 if text == "✅ | تشغيل الصانع" then 
 Redis:del(NASA.."free:bot")
-send(msg.chat_id,msg.id,'*◍ تم تشغيل بوت الصانع، يمكن للمستخدمين صنع بوتاتهم الآن ..*',"md",true)  
+send(msg.chat_id,msg.id,'*〄 تم تشغيل بوت الصانع، يمكن للمستخدمين صنع بوتاتهم الآن ..*',"md",true)  
 end
 if text == "❎ | تعطيل الصانع" then 
 Redis:set(NASA.."free:bot",true)
-send(msg.chat_id,msg.id,'*◍ تم ايقاف صنع البوتات في المصنع، لن يتمكن احد من استخدام الصانع في الوقت الحالي ..*',"md",true)  
+send(msg.chat_id,msg.id,'*〄 تم ايقاف صنع البوتات في المصنع، لن يتمكن احد من استخدام الصانع في الوقت الحالي ..*',"md",true)  
 end
 --------------------------------------------------------------------------------------------------------------
 if text == "الاسكرينات المفتوحه 📂" then  
 rqm = 0
-local message = ' ◍  السكرينات الموجوده بالسيرفر \n\n'
+local message = ' 〄  السكرينات الموجوده بالسيرفر \n\n'
 for screnName in io.popen('ls /var/run/screen/S-root'):lines() do
 rqm = rqm + 1
 message = message..rqm..'-  { '..screnName..' }\n'
@@ -541,7 +541,7 @@ Redis:sadd(NASA.."bots:folder",folder:gsub("@",""))
 end
 end
 if not Redis:sismember(NASA.."bots:folder",userbot) then
-send(msg.chat_id,msg.id,"*◍ عفواً، هذا البوت ليس ضمن البوتات المصنوعة !!*","md")
+send(msg.chat_id,msg.id,"*〄 عفواً، هذا البوت ليس ضمن البوتات المصنوعة !!*","md")
 return false 
 end
 for screen in io.popen('ls /var/run/screen/S-root'):lines() do
@@ -1037,7 +1037,7 @@ data = {
 },
 }
 }
-return send(msg.chat_id,msg.id,"〄 عذار عزيزي المصنع وقف الان \n 〄 المصنع قيد التحديث\n⬇️ | تابع الازرار الي في الاسفل للتواصل معنا","md",false, false, false, false, reply_markup)
+return send(msg.chat_id,msg.id,"〄 عذار عزيزي المصنع وقف الان \n〄 المصنع قيد التحديث\n〄 تابع الازرار الي في الاسفل للتواصل معنا","md",false, false, false, false, reply_markup)
 end
 if text == "/start" then
 if not Redis:sismember(NASA.."total",msg.sender_id.user_id) then
@@ -1074,7 +1074,7 @@ end
 if text and Redis:get(NASA..msg.sender_id.user_id.."make:bot") then
 if text == "• إلغاء •" then
 Redis:del(NASA..msg.sender_id.user_id.."make:bot")
-send(msg.chat_id,msg.id,"*◍ تم الغاء امر صناعة البوت ..*","md")
+send(msg.chat_id,msg.id,"*〄 تم الغاء امر صناعة البوت ..*","md")
 return false 
 end
 if (text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/") 
@@ -1093,7 +1093,7 @@ local json = JSON.decode(url)
 if json.ok == true then
 local botuser = json.result.username
 if Redis:sismember(NASA.."userbots",botuser) then
-send(msg.chat_id,msg.id, "\n◍ عذراً، هذا البوت بالفعل مصنوع ..","md",true)  
+send(msg.chat_id,msg.id, "\n〄 عذراً، هذا البوت بالفعل مصنوع ..","md",true)  
 return false 
 end 
 local uu = LuaTele.getUser(msg.sender_id.user_id)
@@ -1149,7 +1149,7 @@ if Redis:get(NASA..msg.sender_id.user_id.."my:bot") then
 return send(msg.chat_id,msg.id,"عذراً، انت بالفعل قمت بصنع بوت لا يمكنك صنع اكثر من بوت في الصانع قم بحذف بوتك الثاني من ثم قم بصنع بوت جديد !")
 end
 Redis:set(NASA..msg.sender_id.user_id.."make:bot",true)
-send(msg.chat_id,msg.id,"*◍ قم بإرسال توكن بوتك الآن ..*", 'md')
+send(msg.chat_id,msg.id,"*〄 قم بإرسال توكن بوتك الآن ..*", 'md')
 return false 
 end
 if text == "🔹 | طريقه عمل بوت" then
@@ -1168,7 +1168,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"*◍ الزر الاول للحصول علي التوكن \n ◍ الزر الثاني لمعرفه أنشأ البوت من الصفر ..*","md",false, false, false, false, reply_markup)
+send(msg.chat_id,msg.id,"*〄 الزر الاول للحصول علي التوكن \n 〄 الزر الثاني لمعرفه أنشأ البوت من الصفر ..*","md",false, false, false, false, reply_markup)
 return false 
 end
 if text and text:match("/start st(.*)u(%d+)") then
