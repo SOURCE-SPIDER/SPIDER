@@ -1174,7 +1174,7 @@ end
 if text and text:match("/start st(.*)u(%d+)") then
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {
 {{text = '- اخفاء الامر ', data =msg.sender_id.user_id..'/delAmr'},},}}
- send(msg.chat_id,msg.id,"https://telegra.ph/NASAbot-07-24","html",false, false, false, false, reply_markup)
+ send(msg.chat_id,msg.id,"https://telegra.ph/VENOM-02-02-4","html",false, false, false, false, reply_markup)
 end
 
 ----end making user
