@@ -297,7 +297,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور فينوم* \n","md",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور اسـامه* \n","md",true, false, false, true, reply_markup)
 return false 
 end
 if text == "⏺️ | قسم الاذاعه" then 
@@ -320,7 +320,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور فـيـنوم* \n","md",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور اسـامه* \n","md",true, false, false, true, reply_markup)
 return false 
 end
 if text == "⏺️ | قسم المصنع" then 
@@ -340,7 +340,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور فينوم* \n","md",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور اسـامه \n","md",true, false, false, true, reply_markup)
 return false 
 end
 if text == "⏺️ | قسم التفعيل" then 
@@ -363,7 +363,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور فينوم* \n","md",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"*◍ اهلاً بك عـزيـري الـمـطور اسـامه* \n","md",true, false, false, true, reply_markup)
 return false 
 end
 
@@ -970,7 +970,7 @@ bot_id = x[1]
 Redis:sadd(bot_id.."BanAll:Groups",UserId) 
 end 
 end
-send(msg.chat_id,msg.id," تم حظرو بنجاح ","md",true)  
+send(msg.chat_id,msg.id," تم حظره بنجاح ","md",true)  
 return false 
 end
 end
@@ -1033,7 +1033,7 @@ data = {
 {text = '👤 | مبرمج السورس', url = 't.me/WWWL5'}, 
 },
 {
-{text = '🌐 | قناة السورس', url = 't.me/MRv7x'}, 
+{text = '🌐 | قناة السورس', url = 't.me/EE_20'}, 
 },
 }
 }
@@ -1122,23 +1122,23 @@ os.execute('cp -a ./MKNASA/. ./@'..botuser..' && cd @'..botuser..' && chmod +x *
 Redis:set(NASA..msg.sender_id.user_id.."my:bot",botuser)
 Redis:sadd(NASA.."userbots",botuser)
 Redis:del(NASA..msg.sender_id.user_id.."make:bot")
-send(Sudo_Id,0,"عزيزي المطور تم تنصيب بوت جديد علي الصانع !!\n\n• توكن البوت `"..text.."`\n• يوزر البوت @["..botuser.."] \n• يوزر المطور "..sudo_state.."\n\n- اصبح عدد البوتات علي الصانع الآن : `"..#allb.."` بوت !!","md",true)
+send(Sudo_Id,0,"عزيزي المطور تم تنصيب بوت جديد علي الصانع !!\n\n⨳ توكن البوت `"..text.."`\n⨳ يوزر البوت @["..botuser.."] \n⨳ يوزر المطور "..sudo_state.."\n\n- اصبح عدد البوتات علي الصانع الآن : `"..#allb.."` بوت !!","md",true)
 local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '𝘀𝗼𝗨𝗥𝗰𝗲 𝘃𝗲𝗡𝗼𝗺', url = 't.me/MRv7x'}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗘𝗩𝗘𝗡', url = 't.me/EE_20'}, 
 },
 {
-{text = '𝗼𝘀𝗔𝗺𝗔 𝘃𝗲𝗡𝗼𝗺', url = 't.me/WWWL5'}, 
+{text = '𝗢𝗦𝗔𝗠𝗔 | اسـامه', url = 't.me/WWWL5'}, 
 },
 {
-{text = '𝗗𝗲𝘃𝗲𝗟𝗼𝗣𝗲𝗥𝘀', url = 't.me/SOURCE_VENOM'}, 
+{text = '𝗗𝗲𝘃𝗲𝗟𝗼𝗣𝗲𝗥𝘀', url = 't.me/SOURCE_SEVEN'}, 
 },
 }
 }
-send(-1001690426912,0,"*⨳ تم تنصيب بوت علي سورس فينوم\n┄──━━━ 𝗩𝗘𝗡𝗢𝗠 ━━━──┄\n*⨳ يوزر البوت:- @["..botuser.."] *\n*⨳ يوزر المطور :- "..sudo_state.."*\n*⨳ اصبح عدد البوتات علي الصانع الآن : `"..#allb.."` بوت*\n*","md",false, false, false, false, reply_markup)
-send(msg.chat_id,msg.id,"• تم حفظ البيانات وسيتم تشغيل بوتك بعد 10 ثواني\n\n• يوزر البوت @["..botuser.."] \n• الـمـطـوࢪ "..sudo_state.."\n\n [𝗼𝘀𝗔𝗺𝗔 𝘃𝗲𝗡𝗼𝗺](t.me/WWWL5)\n [𝘀𝗼𝗨𝗥𝗰𝗲 𝘃𝗲𝗡𝗼𝗺](t.me/MRv7x)","md",true)
+send(-1001690426912,0,"*⨳ SEVEN تم تنصيب بوت علي سورس\n━‌‌‏─━─━『𝗦𝗘𝗩𝗘𝗡』━─━─━‌‌‏\n*⨳ يوزر البوت:- @["..botuser.."] *\n*⨳ يوزر المطور :- "..sudo_state.."*\n*⨳ اصبح عدد البوتات علي الصانع الآن : `"..#allb.."` بوت*\n*","md",false, false, false, false, reply_markup)
+send(msg.chat_id,msg.id,"⨳ سيتم تشغيل بوتك بعد 10 ثواني\n\n⨳ يوزر البوت @["..botuser.."] \n⨳ الـمـطـوࢪ "..sudo_state.."\n\n [𝗢𝗦𝗔𝗠𝗔 | اسامه(t.me/WWWL5)\n [𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗘𝗩𝗘𝗡](t.me/EE_20)","md",true)
 return false 
 end
 send(msg.chat_id,msg.id,"⨳ التوكن غير صحيح تأكد منه ثم ارسلة مره اخري ..")
