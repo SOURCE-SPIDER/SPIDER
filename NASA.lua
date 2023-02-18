@@ -1030,23 +1030,23 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '👤 | مبرمج السورس', url = 't.me/WWWL5'}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗘𝗩𝗘𝗡', url = 't.me/EE_20'}, 
 },
 {
-{text = '🌐 | قناة السورس', url = 't.me/EE_20'}, 
+{text = ' ͟͟͞͞➳❥❬ 𝐎𝐒𝐀𝐌𝐀 ❭•', url = 't.me/WWWWL5}, 
 },
 }
 }
-return send(msg.chat_id,msg.id,"⨳ عذار عزيزي المصنع وقف الان \n⨳ المصنع قيد التحديث\n⨳ تابع الازرار الي في الاسفل للتواصل معنا","md",false, false, false, false, reply_markup)
+return send(msg.chat_id,msg.id,"⨳ تم تعطيل الوضع المجاني | تابع الازرار ⬇️","md",false, false, false, false, reply_markup)
 end
 if text == "/start" then
 if not Redis:sismember(NASA.."total",msg.sender_id.user_id) then
 Redis:sadd(NASA.."total",msg.sender_id.user_id)
 local list = Redis:smembers(NASA.."total")
-LuaTele.sendText(Sudo_Id,0,'*\n• تم دخول شخص جديد الي البوت ..\n*',"md")
+LuaTele.sendText(Sudo_Id,0,'*\n⨳ تم دخول شخص جديد الي البوت ..\n*',"md")
 end
 local news =[[
-⨳ أهلا بك في صانع بوتات الحمايه SEVEN 
+⨳ أهلا بك في صانع بوتات حمايه SEVEN 
 ]]
 reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
@@ -1082,7 +1082,7 @@ or text and text:match("[Hh][Tt][Tt][Pp][Ss]://")
 or text and text:match("[Hh][Tt][Tt][Pp]://") 
 or text and text:match("[Ww][Ww][Ww].") 
 or text and text:match(".[Cc][Oo][Mm]")) or text and text:match("[Hh][Tt][Tt][Pp][Ss]://") or text and text:match("[Hh][Tt][Tt][Pp]://") or text and text:match("[Ww][Ww][Ww].") or text and text:match(".[Cc][Oo][Mm]") or text and text:match(".[Tt][Kk]") or text and text:match(".[Mm][Ll]") or text and text:match(".[Oo][Rr][Gg]") then 
-return send(msg.chat_id,msg.id,"⨳ لا يمكنك ارسال اي شيء غير التوكن \n يجب عليك ارسل التوكن فقط اي شئ ثاني ممنوع")
+return send(msg.chat_id,msg.id,"⨳ التوكن الذي ارسلتة غير صحيح")
 end 
 local url = https.request("http://api.telegram.org/bot"..text.."/getme")
 local json = JSON.decode(url)
@@ -1118,7 +1118,7 @@ os.execute('cp -a ./MKNASA/. ./@'..botuser..' && cd @'..botuser..' && chmod +x *
 Redis:set(NASA..msg.sender_id.user_id.."my:bot",botuser)
 Redis:sadd(NASA.."userbots",botuser)
 Redis:del(NASA..msg.sender_id.user_id.."make:bot")
-send(Sudo_Id,0,"عزيزي المطور تم تنصيب بوت جديد علي الصانع !!\n\n• توكن البوت `"..text.."`\n• يوزر البوت @["..botuser.."] \n• يوزر المطور "..sudo_state.."\n\n- اصبح عدد البوتات علي الصانع الآن : `"..#allb.."` بوت !!","md",true)
+send(Sudo_Id,0,"⨳ عزيزي المطور تم تنصيب بوت جديد علي الصانع !!\n\n⨳ توكن البوت `"..text.."`\n⨳ يوزر البوت @["..botuser.."] \n⨳ يوزر المطور "..sudo_state.."\n\n- اصبح عدد البوتات علي الصانع الآن : `"..#allb.."` بوت !!","md",true)
 local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
@@ -1126,7 +1126,7 @@ data = {
 {text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗘𝗩𝗘𝗡', url = 't.me/EE_20'}, 
 },
 {
-{text = '`˚₊· ͟͟͞͞➳❥❬ 𝐎𝐒𝐀𝐌𝐀 ❭•', url = 't.me/WWWL5'}, 
+{text = ' ͟͟͞͞➳❥❬ 𝐎𝐒𝐀𝐌𝐀 ❭•', url = 't.me/WWWL5'}, 
 },
 {
 {text = '𝗗𝗲𝘃𝗲𝗟𝗼𝗣𝗲𝗥𝘀', url = 't.me/SOURCE_SEVEN'}, 
@@ -1134,7 +1134,7 @@ data = {
 }
 }
 send(-1001690426912,0,"*⨳ تم تنصيب بوت علي سورس سيڤين\n┄──━━━ 𝗦𝗘𝗩𝗘𝗡 ━━━──┄\n*⨳ يوزر البوت:- @["..botuser.."] *\n*⨳ يوزر المطور :- "..sudo_state.."*\n*⨳ اصبح عدد البوتات علي الصانع الآن : `"..#allb.."` بوت*\n*","md",false, false, false, false, reply_markup)
-send(msg.chat_id,msg.id,"● سيتم تشغيل بوتك بعد ثوانى\n\n• يوزر البوت @["..botuser.."] \n● الـمـطـوࢪ "..sudo_state.."\n\n [`˚₊· ͟͟͞͞➳❥❬ 𝐎𝐒𝐀𝐌𝐀 ❭•°`](t.me/WWWL5)\n [𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗘𝗩𝗘𝗡](t.me/EE_20)","md",true)
+send(msg.chat_id,msg.id,"⨳ سيتم تشغيل بوتك بعد 10 ثوانى\n\n⨳ يوزر البوت @["..botuser.."] \n⨳ الـمـطـوࢪ "..sudo_state.."\n\n [ ͟͟͞͞➳❥❬ 𝐎𝐒𝐀𝐌𝐀 ❭•](t.me/WWWL5)\n [𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗘𝗩𝗘𝗡](t.me/EE_20)","md",true)
 return false 
 end
 send(msg.chat_id,msg.id,"⨳ التوكن غير صحيح تأكد منه ثم ارسلة مره اخري ..")
@@ -1142,7 +1142,7 @@ end
 
 if text == "⨳ صنع بوت" then
 if Redis:get(NASA..msg.sender_id.user_id.."my:bot") then
-return send(msg.chat_id,msg.id,"● لديك بوت مصنوع بالفعل 🤖")
+return send(msg.chat_id,msg.id,"⨳ لديك بوت مصنوع بالفعل 🤖")
 end
 Redis:set(NASA..msg.sender_id.user_id.."make:bot",true)
 send(msg.chat_id,msg.id,"*⨳ قم بإرسال توكن بوتك الآن ..*", 'md')
@@ -1181,9 +1181,9 @@ os.execute("sudo rm -fr @"..botuser)
 os.execute("screen -X -S "..botuser.." quit")
 Redis:srem(NASA.."userbots",botuser)
 Redis:del(NASA..msg.sender_id.user_id.."my:bot")
-send(msg.chat_id,msg.id, "\n*⨳  تم حذف بوتك بنجاح*","md",true)  
+send(msg.chat_id,msg.id, "\n*⨳ تم حذف بوتك بنجاح*","md",true)  
 else
-send(msg.chat_id,msg.id, "\n*عذراً، انت لم تصنع بوت !*","md",true)  
+send(msg.chat_id,msg.id, "\n*⨳ عذراً، انت لم تصنع بوت !*","md",true)  
 end
 end
 
