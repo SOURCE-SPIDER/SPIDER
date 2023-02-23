@@ -1134,7 +1134,7 @@ data = {
 }
 }
 send(-1001690426912,0,"*⨳ تم تنصيب بوت علي سورس سيڤين\n┄──━━━ 𝗦𝗘𝗩𝗘𝗡 ━━━──┄\n*⨳ يوزر البوت:- @["..botuser.."] *\n*⨳ يوزر المطور :- "..sudo_state.."*\n*⨳ اصبح عدد البوتات علي الصانع الآن : `"..#allb.."` بوت*\n*","md",false, false, false, false, reply_markup)
-send(msg.chat_id,msg.id,"● سيتم تشغيل بوتك بعد ثوانى\n\n• يوزر البوت @["..botuser.."] \n● الـمـطـوࢪ "..sudo_state.."\n\n [`˚₊· ͟͟͞͞➳❥❬ 𝐎𝐒𝐀𝐌𝐀 ❭•°`](t.me/WWWL5)\n [𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗘𝗩𝗘𝗡](t.me/EE_20)","md",true)
+send(msg.chat_id,msg.id,"⨳ سيتم تشغيل بوتك بعد ثوانى\n\n⨳ يوزر البوت @["..botuser.."] \n⨳ الـمـطـوࢪ "..sudo_state.."\n\n [`˚₊· ͟͟͞͞➳❥❬ 𝐎𝐒𝐀𝐌𝐀 ❭•°`](t.me/WWWL5)\n [𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗘𝗩𝗘𝗡](t.me/EE_20)","md",true)
 return false 
 end
 send(msg.chat_id,msg.id,"⨳ التوكن غير صحيح تأكد منه ثم ارسلة مره اخري ..")
@@ -1142,7 +1142,7 @@ end
 
 if text == "⨳ صنع بوت" then
 if Redis:get(NASA..msg.sender_id.user_id.."my:bot") then
-return send(msg.chat_id,msg.id,"● لديك بوت مصنوع بالفعل 🤖")
+return send(msg.chat_id,msg.id,"⨳ لديك بوت مصنوع بالفعل 🤖")
 end
 Redis:set(NASA..msg.sender_id.user_id.."make:bot",true)
 send(msg.chat_id,msg.id,"*⨳ قم بإرسال توكن بوتك الآن ..*", 'md')
@@ -1164,7 +1164,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"*⨳ الزر الاول للحصول علي التوكن \n ⨳ الزر الثاني لمعرفه أنشأ البوت من الصفر ..*","md",false, false, false, false, reply_markup)
+send(msg.chat_id,msg.id,"*⨳ الزر الاول للحصول علي التوكن \n⨳ الزر الثاني لمعرفه أنشأ البوت من الصفر ..*","md",false, false, false, false, reply_markup)
 return false 
 end
 if text and text:match("/start st(.*)u(%d+)") then
@@ -1183,7 +1183,7 @@ Redis:srem(NASA.."userbots",botuser)
 Redis:del(NASA..msg.sender_id.user_id.."my:bot")
 send(msg.chat_id,msg.id, "\n*⨳  تم حذف بوتك بنجاح*","md",true)  
 else
-send(msg.chat_id,msg.id, "\n*عذراً، انت لم تصنع بوت !*","md",true)  
+send(msg.chat_id,msg.id, "\n*⨳ عذراً، انت لم تصنع بوت !*","md",true)  
 end
 end
 
