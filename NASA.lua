@@ -217,7 +217,7 @@ end
 
 if Dev(msg) then
 if text == "الاصدار" or text == "الاصدار ‌⚙️⁩" then
-LuaTele.sendText(Sudo_Id,0,"● اصدار سورس سبايدر \n● الاصدار » v.5 GOLD\n√")
+LuaTele.sendText(Sudo_Id,0,"● اصدار سورس سبايدر \n● الاصدار » v.5.1 GOLD\n√")
 dofile('NASA.lua')  
 return false 
 end
